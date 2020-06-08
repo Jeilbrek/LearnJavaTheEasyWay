@@ -8,7 +8,12 @@ public class HiLoGUI extends JFrame {
     private JTextField txtGuess;
     private JButton guessButton;
     private JLabel lblOutput;
+    private JLabel guessText;
+    private JLabel gameTitle;
     private int theNumber;
+
+    private int windowWIDTH = 450;
+    private int windowHEIGHT = 300;
 
     public void checkGuess() {
         String guessText = txtGuess.getText();
@@ -29,12 +34,28 @@ public class HiLoGUI extends JFrame {
     public void newGame() {
         theNumber = (int)(Math.random() * 100 + 1);
 
+        gameTitle.setHorizontalAlignment(SwingConstants.CENTER);
+        gameTitle.setBounds(10, 10, 414, 30);
+        getContentPane().add(gameTitle);
+
+        guessText.setBounds(80, 89, 414, 30);
+        getContentPane().add(guessText);
+
+        txtGuess.setBounds(292, 95, 43, 20);
+        getContentPane().add(txtGuess);
+        txtGuess.setColumns(10);
+
         guessButton.addActionListener(new ActionListener() {
             // @Override
             public void actionPerformed(ActionEvent e) {
                 checkGuess();
             }
         });
+        guessButton.setBounds(172, 149, 89, 23);
+        getContentPane().add(guessButton);
+
+        lblOutput.setHorizontalAlignment(SwingConstants.CENTER);
+        getContentPane().add(lblOutput);
     }
 
     public static void main(String[] args) {
