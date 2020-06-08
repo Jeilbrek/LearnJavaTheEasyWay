@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="HiLoGUI">
+  <grid id="27dc6" layout-manager="GridLayoutManager" row-count="5" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="9" y="20" width="511" height="305"/>
+    </constraints>
+    <properties>
+      <alignmentX value="0.5"/>
+      <enabled value="false"/>
+      <font name="Tahoma" size="15"/>
+    </properties>
+    <border type="none" title="Adrian's Hi-Lo Guessing Name"/>
+    <children>
+      <component id="e7c86" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="196" height="27"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Tahoma" size="15"/>
+          <text value="Adrian's Hi-Lo Guessing Name"/>
+          <verticalAlignment value="0"/>
+          <verticalTextPosition value="0"/>
+        </properties>
+      </component>
+      <component id="78a07" class="javax.swing.JTextField" binding="txtGuess">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="1" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="fbc95" class="javax.swing.JButton" binding="guessButton" default-binding="true">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Guess!"/>
+        </properties>
+      </component>
+      <component id="4fd4c" class="javax.swing.JLabel" binding="lblOutput">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Enter a number above and click Guess!!!"/>
+        </properties>
+      </component>
+      <component id="f6aad" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Guess a number between 1 and 100:"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
