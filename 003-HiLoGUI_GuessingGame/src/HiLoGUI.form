@@ -9,6 +9,8 @@
       <alignmentX value="0.5"/>
       <enabled value="false"/>
       <font name="Tahoma" size="15"/>
+      <maximumSize width="450" height="300"/>
+      <minimumSize width="450" height="300"/>
     </properties>
     <border type="none" title="Adrian's Hi-Lo Guessing Name"/>
     <children>
@@ -32,6 +34,7 @@
           </grid>
         </constraints>
         <properties>
+          <font name="Tahoma" size="15"/>
           <text value=""/>
         </properties>
       </component>
@@ -40,6 +43,7 @@
           <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <font name="Tahoma"/>
           <text value="Guess!"/>
         </properties>
       </component>
@@ -48,6 +52,7 @@
           <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <font name="Tahoma"/>
           <text value="Enter a number above and click Guess!!!"/>
         </properties>
       </component>
@@ -56,6 +61,7 @@
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <font name="Tahoma" size="13" style="0"/>
           <text value="Guess a number between 1 and 100:"/>
         </properties>
       </component>
