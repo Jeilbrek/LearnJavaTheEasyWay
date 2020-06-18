@@ -7,6 +7,7 @@ public class HiLoGUI extends JFrame {
 
     private JTextField txtGuess;
     private JButton guessButton;
+    private JButton btnPlayAgain;
     private JLabel lblOutput;
     private JLabel guessText;
     private JLabel gameTitle;
@@ -18,13 +19,15 @@ public class HiLoGUI extends JFrame {
         try {
             int guess = Integer.parseInt(guessText);
 
-            if (guess < theNumber)
+            if (guess < theNumber) {
                 message = guess + " is too low. Try again.";
-            else if (guess > theNumber)
+            }
+            else if (guess > theNumber) {
                 message = guess + " is too high. Try Again.";
+            }
             else {
                 message = guess + " is correct. You win! Let's play again!";
-                newGame();
+                btnPlayAgain.setVisible(true);
             }
         } catch (Exception e) {
             message = "Enter a whole number between 1 and 100.";
@@ -57,6 +60,15 @@ public class HiLoGUI extends JFrame {
         getContentPane().add(txtGuess);
         txtGuess.setColumns(10);
 
+        btnPlayAgain.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                newGame();
+            }
+        });
+        btnPlayAgain.setBounds(160, 180, 110, 23);
+        getContentPane().add(btnPlayAgain);
+        btnPlayAgain.setVisible(false);
+
         guessButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 checkGuess();
@@ -67,6 +79,7 @@ public class HiLoGUI extends JFrame {
 
         lblOutput.setHorizontalAlignment(SwingConstants.CENTER);
         getContentPane().add(lblOutput);
+        lblOutput.setText("Enter a number above and click Guess!!!");
     }
 
     public static void main(String[] args) {
