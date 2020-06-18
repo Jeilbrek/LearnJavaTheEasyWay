@@ -12,9 +12,6 @@ public class HiLoGUI extends JFrame {
     private JLabel gameTitle;
     private int theNumber;
 
-    private int windowWIDTH = 450;
-    private int windowHEIGHT = 300;
-
     public void checkGuess() {
         String guessText = txtGuess.getText();
         String message = "";
@@ -24,11 +21,17 @@ public class HiLoGUI extends JFrame {
             message = guess + " is too low. Try again.";
         else if (guess > theNumber)
             message = guess + " is too high. Try Again.";
-        else
-            message = guess + " is correct. You win!";
+        else {
+            message = guess + " is correct. You win! Let's play again!";
+            newGame();
+        }
 
         // Show the message to the user, using the lblOutput GUI label
         lblOutput.setText(message);
+
+        // Keep the cursor focused on the text input field
+        txtGuess.requestFocus();
+        txtGuess.selectAll();
     }
 
     public void newGame() {
@@ -41,12 +44,17 @@ public class HiLoGUI extends JFrame {
         guessText.setBounds(80, 89, 414, 30);
         getContentPane().add(guessText);
 
+        txtGuess.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                checkGuess();
+            }
+        });
         txtGuess.setBounds(292, 95, 43, 20);
         getContentPane().add(txtGuess);
         txtGuess.setColumns(10);
 
         guessButton.addActionListener(new ActionListener() {
-            // @Override
+            @Override
             public void actionPerformed(ActionEvent e) {
                 checkGuess();
             }
