@@ -54,7 +54,6 @@ public class HiLoGUI extends JFrame {
         txtGuess.setColumns(10);
 
         guessButton.addActionListener(new ActionListener() {
-            @Override
             public void actionPerformed(ActionEvent e) {
                 checkGuess();
             }
