@@ -15,23 +15,27 @@ public class HiLoGUI extends JFrame {
     public void checkGuess() {
         String guessText = txtGuess.getText();
         String message = "";
-        int guess = Integer.parseInt(guessText);
+        try {
+            int guess = Integer.parseInt(guessText);
 
-        if (guess < theNumber)
-            message = guess + " is too low. Try again.";
-        else if (guess > theNumber)
-            message = guess + " is too high. Try Again.";
-        else {
-            message = guess + " is correct. You win! Let's play again!";
-            newGame();
+            if (guess < theNumber)
+                message = guess + " is too low. Try again.";
+            else if (guess > theNumber)
+                message = guess + " is too high. Try Again.";
+            else {
+                message = guess + " is correct. You win! Let's play again!";
+                newGame();
+            }
+        } catch (Exception e) {
+            message = "Enter a whole number between 1 and 100.";
+        } finally {
+            // Show the message to the user, using the lblOutput GUI label
+            lblOutput.setText(message);
+
+            // Keep the cursor focused on the text input field
+            txtGuess.requestFocus();
+            txtGuess.selectAll();
         }
-
-        // Show the message to the user, using the lblOutput GUI label
-        lblOutput.setText(message);
-
-        // Keep the cursor focused on the text input field
-        txtGuess.requestFocus();
-        txtGuess.selectAll();
     }
 
     public void newGame() {
