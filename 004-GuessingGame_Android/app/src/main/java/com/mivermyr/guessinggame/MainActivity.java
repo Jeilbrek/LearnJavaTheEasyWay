@@ -8,6 +8,7 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.view.KeyEvent;
 import android.view.View;
 
 import android.view.Menu;
@@ -71,6 +72,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 checkGuess();
+            }
+        });
+
+        txtGuess.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                checkGuess();
+                return true;
             }
         });
 
