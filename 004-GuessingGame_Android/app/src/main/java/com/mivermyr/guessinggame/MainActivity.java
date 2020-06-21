@@ -12,13 +12,26 @@ import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
-
+    private EditText txtGuess;
+    private Button btnGuess;
+    private TextView lblOutput;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        txtGuess = (EditText) findViewById(R.id.txtGuess);
+        btnGuess = (Button) findViewById(R.id.btnGuess);
+        lblOutput = (TextView) findViewById(R.id.lblOutput);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
